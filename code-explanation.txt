@@ -1,0 +1,77 @@
+HTML CODE: 
+
+This is HTML code that creates the structure of a basic To-Do List App web page. Let's go through each line of code:
+
+1. `<!DOCTYPE html>`: This declares the HTML document type being used.
+2. `<html>`: This starts the HTML document.
+3. `<head>`: This section contains information about the document such as the page title and any stylesheets used.
+4. `<title>To-Do List App</title>`: This sets the title of the webpage to "To-Do List App".
+5. `<link rel="stylesheet" href="style.css">`: This links to an external stylesheet called "style.css" that will be used to style the webpage.
+6. `</head>`: This ends the head section.
+7. `<body>`: This is the main section of the webpage and contains all visible content.
+8. `<div class="container">`: This creates a container element with the class "container" to hold all the content of the webpage.
+9. `<h1>To-Do List</h1>`: This creates a level 1 heading that says "To-Do List".
+10. `<form id="todo-form">`: This creates a form element with an id of "todo-form" that will be used to add new tasks to the to-do list.
+11. `<input type="text" placeholder="Add a task...">`: This creates a text input field where users can enter a new task to be added to the to-do list.
+12. `<button type="submit">Add</button>`: This creates a submit button that will add the task entered into the text input field to the to-do list when clicked.
+13. `</form>`: This ends the form element.
+14. `<ul id="todo-list"></ul>`: This creates an unordered list element with an id of "todo-list" that will display all the tasks in the to-do list.
+15. `</div>`: This ends the container element.
+16. `<script src="app.js"></script>`: This links to an external JavaScript file called "app.js" that will contain the logic for the To-Do List App.
+17. `</body>`: This ends the body section.
+18. `</html>`: This ends the HTML document.
+
+CSS CODE:
+
+This is CSS code that defines the styles for a To-Do List app. Here's an explanation of what each block of code does:
+
+`.container`: This block of code sets the styles for the container that holds the app. It sets the maximum width to 400px, centers it horizontally, adds some padding, and sets a border with a light gray color, rounded corners, and a box shadow.
+
+`h1`: This block of code sets the styles for the heading of the app, which says "To-Do List". It sets the font size to 36px, adds some bottom margin, and sets the text color to a dark gray.
+
+`form`: This block of code sets the styles for the form that allows users to add tasks to the list. It sets it to display as a flexbox, with some bottom margin.
+
+`input[type="text"]`: This block of code sets the styles for the input field where users enter new tasks. It sets it to take up all available horizontal space, adds some padding, sets the font size to 16px, removes the border, adds rounded corners, and adds a box shadow.
+
+`button[type="submit"]`: This block of code sets the styles for the "Add" button that submits new tasks to the list. It adds some padding, sets the background color to a blue, sets the text color to white, removes the border, adds rounded corners, sets the cursor to a pointer, and adds a box shadow. 
+
+`button[type="submit"]:hover`: This block of code sets the styles for when the user hovers over the "Add" button. It sets the background color to a darker blue.
+
+`ul`: This block of code sets the styles for the list that displays the tasks. It removes the default bullet points and padding.
+
+`li`: This block of code sets the styles for each individual task in the list. It sets it to display as a flexbox, with the task name on the left and the delete button on the right. It adds a light gray background color, some padding, bottom margin, rounded corners, and a box shadow.
+
+`li span`: This block of code sets the styles for the task name inside each task. It sets it to take up all available horizontal space, sets the font size to 16px, sets the text color to a dark gray, and adds some right margin.
+
+`.delete`: This block of code sets the styles for the delete button inside each task. It adds some padding, sets the background color to a red, sets the text color to white, removes the border, adds rounded corners, sets the cursor to a pointer, and adds a box shadow.
+
+`.delete:hover`: This block of code sets the styles for when the user hovers over the delete button. It sets the background color to a darker red.
+
+`.edit`: This block of code sets the styles for the edit button inside each task. It sets the background color to a green, removes the border, sets the text color to white, adds some padding and margin, sets the cursor to a pointer, and adds rounded corners.
+
+`.edit-input`: This block of code sets the styles for the input field that appears when the user clicks on the edit button. It removes the border, sets the font size to 16px, sets the font weight to bold, sets the text color to a dark gray, sets the background color to transparent, adds some right margin, and removes the outline.
+
+JAVASCRIPT CODE: 
+
+This code is an implementation of a simple to-do list app using HTML, CSS, and JavaScript. It has a form with an input field where the user can enter a new task, and a list where the tasks are displayed. The app allows the user to add new tasks, delete existing tasks, and edit the content of the tasks. The app also saves the tasks to local storage so that they can be retrieved even if the page is closed and reopened.
+
+Here is a breakdown of the code:
+
+- `const form = document.getElementById('todo-form');` - This line selects the form element with the ID "todo-form".
+- `const input = form.querySelector('input');` - This line selects the input element inside the form.
+- `const ul = document.getElementById('todo-list');` - This line selects the unordered list element with the ID "todo-list".
+- `let tasks = JSON.parse(localStorage.getItem('tasks')) || [];` - This line retrieves the tasks from local storage and parses them from JSON format into an array. If there are no tasks in local storage, it sets the tasks array to an empty array.
+- `function loadTasks() {...}` - This is a function that loads the tasks into the DOM when the page is loaded.
+- `function saveTasks() {...}` - This is a function that saves the tasks to local storage.
+- `function createTaskElement(task) {...}` - This is a function that creates a new task element in the DOM.
+- `form.addEventListener('submit', function(e) {...}` - This is an event listener that listens for the form submission event and adds a new task to the list.
+- `ul.addEventListener('click', function(e) {...}` - This is an event listener that listens for a click event on the list and deletes a task if the user clicks the delete button.
+- `ul.addEventListener('click', function(e) {...}` - This is an event listener that listens for a click event on the list and allows the user to edit the task content if they click the edit button.
+- `ul.addEventListener('keydown', function(e) {...}` - This is an event listener that listens for a keydown event on the list and saves the edited task content if the user presses the Enter key.
+- `loadTasks();` - This line calls the `loadTasks()` function when the page is loaded to load any existing tasks from local storage.
+- `const toggleModeButton = document.getElementById('toggle-mode');` - This line selects the button element with the ID "toggle-mode".
+- `const body = document.body;` - This line selects the body element of the HTML document.
+- `toggleModeButton.addEventListener('click', function() {...}` - This is an event listener that listens for a click event on the toggle mode button and toggles between light and dark mode for the app.
+
+Overall, this code creates a basic to-do list app that allows the user to add, edit, and delete tasks, and saves the tasks to local storage for persistence.
+
