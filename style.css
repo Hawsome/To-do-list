@@ -104,3 +104,43 @@ li span {
   margin-right: 10px;
   outline: none;
 }
+/* Styles for devices with a max-width of 600px */
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  li {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .delete, .edit {
+    margin-bottom: 10px;
+  }
+}
