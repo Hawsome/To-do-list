@@ -104,6 +104,47 @@ li span {
   margin-right: 10px;
   outline: none;
 }
+/* Media query for screens with a maximum width of 360px */
+@media (max-width: 360px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  input[type="text"] {
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  button[type="submit"] {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  li {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .delete {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .edit {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .edit-input {
+    font-size: 14px;
+  }
+}
+
 /* Styles for devices with a max-width of 600px */
 @media only screen and (max-width: 600px) {
   .container {
@@ -142,5 +183,28 @@ li span {
 
   .delete, .edit {
     margin-bottom: 10px;
+  }
+}
+/* For screens larger than 768px */
+@media only screen and (min-width: 768px) {
+  .todo-list {
+    width: 60%;
+    margin: auto;
+  }
+  .todo-item {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+/* For screens larger than 1024px */
+@media only screen and (min-width: 1024px) {
+  .todo-list {
+    width: 40%;
+    margin: auto;
+  }
+  .todo-item {
+    font-size: 24px;
+    padding: 24px;
   }
 }
