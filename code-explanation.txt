@@ -1,55 +1,47 @@
 HTML CODE: 
 
-This is HTML code that creates the structure of a basic To-Do List App web page. Let's go through each line of code:
+This code is an HTML document that creates the structure of a web page for a To-Do List App. Here is what each part of the code does:
 
-1. `<!DOCTYPE html>`: This declares the HTML document type being used.
-2. `<html>`: This starts the HTML document.
-3. `<head>`: This section contains information about the document such as the page title and any stylesheets used.
-4. `<title>To-Do List App</title>`: This sets the title of the webpage to "To-Do List App".
-5. `<link rel="stylesheet" href="style.css">`: This links to an external stylesheet called "style.css" that will be used to style the webpage.
-6. `</head>`: This ends the head section.
-7. `<body>`: This is the main section of the webpage and contains all visible content.
-8. `<div class="container">`: This creates a container element with the class "container" to hold all the content of the webpage.
-9. `<h1>To-Do List</h1>`: This creates a level 1 heading that says "To-Do List".
-10. `<form id="todo-form">`: This creates a form element with an id of "todo-form" that will be used to add new tasks to the to-do list.
-11. `<input type="text" placeholder="Add a task...">`: This creates a text input field where users can enter a new task to be added to the to-do list.
-12. `<button type="submit">Add</button>`: This creates a submit button that will add the task entered into the text input field to the to-do list when clicked.
-13. `</form>`: This ends the form element.
-14. `<ul id="todo-list"></ul>`: This creates an unordered list element with an id of "todo-list" that will display all the tasks in the to-do list.
-15. `</div>`: This ends the container element.
-16. `<script src="app.js"></script>`: This links to an external JavaScript file called "app.js" that will contain the logic for the To-Do List App.
-17. `</body>`: This ends the body section.
-18. `</html>`: This ends the HTML document.
+- `<!DOCTYPE html>` declares that this is an HTML5 document.
+- The `<html>` element is the root element of the document and contains all other elements.
+- The `<head>` element contains metadata about the document, such as the document title, external stylesheets, and scripts.
+- The `<title>` element specifies the title of the document, which is displayed in the browser's title bar.
+- The first `<link>` element includes a CSS stylesheet called `style.css` for styling the page.
+- The second `<link>` element includes a font stylesheet from Google Fonts to import the Roboto font family.
+- The `<script>` element includes a JavaScript library called Font Awesome to display the plus icon used in the Add button.
+- The `<meta>` element provides metadata about the document, such as the viewport size.
+- The `<body>` element contains the visible content of the document, including the To-Do List App.
+- The `<div>` element with the class `container` groups together the main content of the page.
+- The `<h1>` element displays the heading "To-Do List".
+- The `<form>` element with the id `todo-form` contains an input field for adding tasks and a button for submitting the form.
+- The `<input>` element specifies a text input field for the user to enter tasks.
+- The `<button>` element with the type `submit` submits the form when clicked and includes a Font Awesome icon of a plus sign.
+- The `<ul>` element with the id `todo-list` will contain the list of tasks added by the user.
+- The final `<script>` element links to a JavaScript file called `app.js` which contains the functionality for the To-Do List App.
 
 CSS CODE:
 
-This is CSS code that defines the styles for a To-Do List app. Here's an explanation of what each block of code does:
+This code is CSS code for styling a to-do list web application. 
 
-`.container`: This block of code sets the styles for the container that holds the app. It sets the maximum width to 400px, centers it horizontally, adds some padding, and sets a border with a light gray color, rounded corners, and a box shadow.
+The `.container` class sets a maximum width of 400px, centers it on the page, and adds some padding, border radius, and a box-shadow. It also sets the font-family to 'Montserrat', sans-serif.
 
-`h1`: This block of code sets the styles for the heading of the app, which says "To-Do List". It sets the font size to 36px, adds some bottom margin, and sets the text color to a dark gray.
+The `h1` element is styled with a font size of 48px, margin-bottom of 20px, and a color of #333. It also has a text shadow of 2px 2px #f4f4f4.
 
-`form`: This block of code sets the styles for the form that allows users to add tasks to the list. It sets it to display as a flexbox, with some bottom margin.
+The `form` element is set to display as a flexbox with a margin-bottom of 20px, justify-content of space-between, and align-items of center.
 
-`input[type="text"]`: This block of code sets the styles for the input field where users enter new tasks. It sets it to take up all available horizontal space, adds some padding, sets the font size to 16px, removes the border, adds rounded corners, and adds a box shadow.
+The `input[type="text"]` element is set to grow and shrink as needed by setting `flex: 1`, has a padding of 10px, font size of 16px, border radius of 5px, and a box-shadow. 
 
-`button[type="submit"]`: This block of code sets the styles for the "Add" button that submits new tasks to the list. It adds some padding, sets the background color to a blue, sets the text color to white, removes the border, adds rounded corners, sets the cursor to a pointer, and adds a box shadow. 
+The `button[type="submit"]` element is styled with a padding of 12px, background color of #0077cc, and a white font color. It also has a font size of 18px, border radius of 5px, a box-shadow, and a transition for the background color when hovered over.
 
-`button[type="submit"]:hover`: This block of code sets the styles for when the user hovers over the "Add" button. It sets the background color to a darker blue.
+The `ul` element is set to not display bullet points, have no padding, a maximum height of 300px, and have a scroll bar if necessary.
 
-`ul`: This block of code sets the styles for the list that displays the tasks. It removes the default bullet points and padding.
+The `li` element is set to display as a flexbox, justify-content of space-between, align-items of center, have a background color of #f4f4f4, padding of 10px, a margin-bottom of 10px, and a border-radius of 5px. It also has a box-shadow and a transition for when it is hovered over.
 
-`li`: This block of code sets the styles for each individual task in the list. It sets it to display as a flexbox, with the task name on the left and the delete button on the right. It adds a light gray background color, some padding, bottom margin, rounded corners, and a box shadow.
+The `.delete` and `.edit` classes style the corresponding buttons with padding, background color, font color, font size, border radius, cursor, and a box-shadow. They also have a hover state that changes the background color.
 
-`li span`: This block of code sets the styles for the task name inside each task. It sets it to take up all available horizontal space, sets the font size to 16px, sets the text color to a dark gray, and adds some right margin.
+The `.edit-input` class styles an input field used when editing an item in the to-do list.
 
-`.delete`: This block of code sets the styles for the delete button inside each task. It adds some padding, sets the background color to a red, sets the text color to white, removes the border, adds rounded corners, sets the cursor to a pointer, and adds a box shadow.
-
-`.delete:hover`: This block of code sets the styles for when the user hovers over the delete button. It sets the background color to a darker red.
-
-`.edit`: This block of code sets the styles for the edit button inside each task. It sets the background color to a green, removes the border, sets the text color to white, adds some padding and margin, sets the cursor to a pointer, and adds rounded corners.
-
-`.edit-input`: This block of code sets the styles for the input field that appears when the user clicks on the edit button. It removes the border, sets the font size to 16px, sets the font weight to bold, sets the text color to a dark gray, sets the background color to transparent, adds some right margin, and removes the outline.
+There are two media queries included in this code. The first is for screens with a maximum width of 360px, and the second is for screens with a maximum width of 600px. These media queries adjust the styling of the application for smaller screens.
 
 JAVASCRIPT CODE: 
 
