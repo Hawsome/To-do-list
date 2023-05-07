@@ -147,11 +147,19 @@ li .edit {
   button[type="submit"] {
     padding: 5px;
     font-size: 14px;
+    margin-left: 0px;
   }
   
   li {
     padding: 5px;
     font-size: 14px;
+  }
+
+  li .delete {
+    margin-right: 0px;
+  }
+  li .edit {
+    margin-left: 0px;
   }
   
   .delete {
@@ -198,11 +206,19 @@ li .edit {
   button[type="submit"] {
     width: 100%;
     margin-bottom: 10px;
+    margin-left: 0px;
   }
 
   li {
     flex-direction: column;
     margin-bottom: 20px;
+  }
+
+  li .delete {
+    margin-right: 0px;
+  }
+  li .edit {
+    margin-left: 0px;
   }
 
   .delete, .edit {
@@ -219,6 +235,15 @@ li .edit {
     font-size: 20px;
     padding: 20px;
   }
+  li .delete {
+    margin-right: 0px;
+  }
+  li .edit {
+    margin-left: 0px;
+  }
+  button[type="submit"] {
+    margin-left: 0px;
+  }
 }
 
 /* For screens larger than 1024px */
@@ -230,5 +255,14 @@ li .edit {
   .todo-item {
     font-size: 24px;
     padding: 24px;
+  }
+  li .delete {
+    margin-right: 0px;
+  }
+  li .edit {
+    margin-left: 0px;
+  }
+  button[type="submit"] {
+    margin-left: 0px;
   }
 }
