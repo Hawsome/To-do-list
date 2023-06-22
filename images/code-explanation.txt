@@ -1,0 +1,87 @@
+HTML CODE: 
+
+This code is an HTML document that creates the structure of a web page for a To-Do List App. Here is what each part of the code does:
+
+- `<!DOCTYPE html>` declares that this is an HTML5 document.
+- The `<html>` element is the root element of the document and contains all other elements.
+- The `<head>` element contains metadata about the document, such as the document title, external stylesheets, and scripts.
+- The `<title>` element specifies the title of the document, which is displayed in the browser's title bar.
+- The first `<link>` element includes a CSS stylesheet called `style.css` for styling the page.
+- The second `<link>` element includes a font stylesheet from Google Fonts to import the Roboto font family.
+- The `<script>` element includes a JavaScript library called Font Awesome to display the plus icon used in the Add button.
+- The `<meta>` element provides metadata about the document, such as the viewport size.
+- The `<body>` element contains the visible content of the document, including the To-Do List App.
+- The `<div>` element with the class `container` groups together the main content of the page.
+- The `<h1>` element displays the heading "To-Do List".
+- The `<form>` element with the id `todo-form` contains an input field for adding tasks and a button for submitting the form.
+- The `<input>` element specifies a text input field for the user to enter tasks.
+- The `<button>` element with the type `submit` submits the form when clicked and includes a Font Awesome icon of a plus sign.
+- The `<ul>` element with the id `todo-list` will contain the list of tasks added by the user.
+- The final `<script>` element links to a JavaScript file called `app.js` which contains the functionality for the To-Do List App.
+
+CSS CODE:
+
+1. Global Styles:
+   - `* { box-sizing: border-box; }`: Sets the box-sizing property to border-box for all elements, ensuring that the total width and height of an element includes padding and border, not just the content.
+   - `body`: Styles the `<body>` element by setting the font family, margin, padding, and background color.
+   - `.container`: Styles a container element with a maximum width of 400 pixels, centered horizontally, and with a border-radius, box shadow, and background color.
+
+2. `<h1>` Styles:
+   - `h1`: Styles the `<h1>` element with a specific font size, margin, color, font weight, text shadow, and text alignment.
+
+3. `<form>` and `<input>` Styles:
+   - `form`: Styles a `<form>` element with flexbox properties to arrange its children in a row with space between them.
+   - `input[type="text"]`: Styles text input elements with specific properties like flex, padding, font size, border, border-radius, and box shadow.
+
+4. `<button>` Styles:
+   - `button[type="submit"]`: Styles submit button elements with specific properties like padding, background color, text color, font size, border, border-radius, cursor, box shadow, and transition.
+
+5. `<ul>` and `<li>` Styles:
+   - `ul`: Styles an unordered list by removing default list styles, setting padding, maximum height, and enabling vertical scrolling if the list exceeds the specified height.
+   - `li`: Styles list item elements with flexbox properties to arrange their children in a row with space between them, along with background color, padding, margin, border-radius, box shadow, and transition.
+
+6. Delete and Edit Buttons:
+   - `.delete`: Styles delete buttons with specific properties like padding, background color, text color, font size, border, border-radius, cursor, and box shadow.
+   - `.edit`: Styles edit buttons with specific properties like background color, border, text color, padding, text alignment, text decoration, font size, margin, cursor, border-radius, and font weight.
+   - `.edit-input`: Styles input fields used for editing with specific properties like border, font size, font weight, color, background color, margin-right, and outline.
+
+7. Footer Styles:
+   - `footer`: Styles a footer element with specific properties like background color, text color, padding, text alignment, border-radius, box shadow, and margin top.
+
+8. Social Icons Styles:
+   - `.social-icons`: Styles a container for social icons with margin-top.
+   - `.social-icons a`: Styles links containing social icons with display, margin-right, and color properties.
+   - `.social-icons i`: Styles social icons with font size and transition properties.
+   - Social icon hover effects and animations are also defined.
+
+9. Media Queries:
+   - Media queries are used to apply different styles based on the screen size.
+   - The provided CSS includes media queries for three different breakpoints: 360px, 600px, and 768px.
+   - The styles inside each media query adjust the layout and appearance of elements to better fit the screen size.
+
+Overall, this CSS code defines styles for a container, headings, form elements, buttons, lists, delete and edit buttons, a footer, and social icons. The media queries ensure that the layout remains responsive and adapts to different screen sizes.
+
+JAVASCRIPT CODE: 
+
+This code is an implementation of a simple to-do list app using HTML, CSS, and JavaScript. It has a form with an input field where the user can enter a new task, and a list where the tasks are displayed. The app allows the user to add new tasks, delete existing tasks, and edit the content of the tasks. The app also saves the tasks to local storage so that they can be retrieved even if the page is closed and reopened.
+
+Here is a breakdown of the code:
+
+- `const form = document.getElementById('todo-form');` - This line selects the form element with the ID "todo-form".
+- `const input = form.querySelector('input');` - This line selects the input element inside the form.
+- `const ul = document.getElementById('todo-list');` - This line selects the unordered list element with the ID "todo-list".
+- `let tasks = JSON.parse(localStorage.getItem('tasks')) || [];` - This line retrieves the tasks from local storage and parses them from JSON format into an array. If there are no tasks in local storage, it sets the tasks array to an empty array.
+- `function loadTasks() {...}` - This is a function that loads the tasks into the DOM when the page is loaded.
+- `function saveTasks() {...}` - This is a function that saves the tasks to local storage.
+- `function createTaskElement(task) {...}` - This is a function that creates a new task element in the DOM.
+- `form.addEventListener('submit', function(e) {...}` - This is an event listener that listens for the form submission event and adds a new task to the list.
+- `ul.addEventListener('click', function(e) {...}` - This is an event listener that listens for a click event on the list and deletes a task if the user clicks the delete button.
+- `ul.addEventListener('click', function(e) {...}` - This is an event listener that listens for a click event on the list and allows the user to edit the task content if they click the edit button.
+- `ul.addEventListener('keydown', function(e) {...}` - This is an event listener that listens for a keydown event on the list and saves the edited task content if the user presses the Enter key.
+- `loadTasks();` - This line calls the `loadTasks()` function when the page is loaded to load any existing tasks from local storage.
+- `const toggleModeButton = document.getElementById('toggle-mode');` - This line selects the button element with the ID "toggle-mode".
+- `const body = document.body;` - This line selects the body element of the HTML document.
+- `toggleModeButton.addEventListener('click', function() {...}` - This is an event listener that listens for a click event on the toggle mode button and toggles between light and dark mode for the app.
+
+Overall, this code creates a basic to-do list app that allows the user to add, edit, and delete tasks, and saves the tasks to local storage for persistence.
+
